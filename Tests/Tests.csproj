@@ -68,6 +68,12 @@
       <HintPath>..\lib\System.Data.SQLite.DLL</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -84,11 +90,16 @@
     <Compile Include="Specs\BaseClasses\AssertionExtensions.cs" />
     <Compile Include="Specs\BaseClasses\ExpectationBuilder.cs" />
     <Compile Include="Specs\BaseClasses\SpecificationsFor.cs" />
+    <Compile Include="Specs\OldStyle\HomeControllerOldStyleSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{4AEBF260-6924-45C4-9353-A5B51799A794}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\Web.csproj">
+      <Project>{629F02D8-D7DB-42C9-A84E-B782BD99B28B}</Project>
+      <Name>Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
