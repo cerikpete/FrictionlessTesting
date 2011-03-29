@@ -1,0 +1,13 @@
+bin
+obj
+*.suo
+*.csproj.user
+_ReSharper.*
+Build
+*.resharper
+*.resharper.user
+*.ReSharper.user
+*.sln.cache
+TestResult.xml
+*.log
+logs
