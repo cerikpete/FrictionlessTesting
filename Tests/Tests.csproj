@@ -88,9 +88,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specs\BaseClasses\ArgumentBuilder.cs" />
     <Compile Include="Specs\BaseClasses\AssertionExtensions.cs" />
+    <Compile Include="Specs\BaseClasses\ControllerSpecificationsFor.cs" />
     <Compile Include="Specs\BaseClasses\ExpectationBuilder.cs" />
     <Compile Include="Specs\BaseClasses\SpecificationsFor.cs" />
     <Compile Include="Specs\NewStyle\HomeControllerNewStyleSpecs.cs" />
+    <Compile Include="Specs\NewStyle\HomeControllerWithControllerBaseSpecs.cs" />
     <Compile Include="Specs\OldStyle\HomeControllerOldStyleSpecs.cs" />
   </ItemGroup>
   <ItemGroup>

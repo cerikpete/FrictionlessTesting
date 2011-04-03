@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using Web.Controllers;
 using Tests.Specs.BaseClasses;
-using Data;
-using Data.Domain;
 using NUnit.Framework;
+using Data.Domain;
 using System.Web.Mvc;
+using Data;
 
 namespace Tests.Specs.NewStyle
 {
-    public class BaseHomeControllerNewStyleSpecs : SpecificationsFor<HomeController>
+    public class BaseHomeControllerWithControllerBaseSpecs : ControllerSpecificationsFor<HomeController>
     {
         protected IEnumerable<Document> _documents;
-        private ActionResult _result;
+        protected ActionResult _result;
 
         public override void Set_up_context()
         {
@@ -35,13 +35,12 @@ namespace Tests.Specs.NewStyle
     }
 
     [TestFixture]
-    public class When_viewing_the_home_controller_index_page : BaseHomeControllerNewStyleSpecs
+    public class When_viewing_the_home_controller_index_page_with_controller_base_specs : BaseHomeControllerWithControllerBaseSpecs
     {
         [Test]
-        public void Should_load_all_documents_to_the_view()
+        public void Shouuld_load_all_documents_to_the_view()
         {
-            var result = sut.Index() as ViewResult;
-            Assert.AreEqual(_documents, result.ViewData["Data"]);
+            Assert.AreEqual(_documents, GetViewDataFromResult(_result));
         }
     }
 }
