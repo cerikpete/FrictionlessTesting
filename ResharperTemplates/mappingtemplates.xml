@@ -1,0 +1,33 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="6e63679e-0d7e-4d3d-8102-59355046c0d0" shortcut="commandspec" description="" text="[Category(&quot;$commandname$Specs&quot;)]&#xD;&#xA;public class Base$commandname$Specs : SpecificationsFor&lt;$commandname$&gt;&#xD;&#xA;{&#xD;&#xA;    public override void Set_up_context()&#xD;&#xA;    {&#xD;&#xA;        base.Set_up_context();&#xD;&#xA;        &#xD;&#xA;        // Set up dependencies&#xD;&#xA;        $END$&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    public override void And_calling()&#xD;&#xA;    {&#xD;&#xA;        sut.Execute();&#xD;&#xA;    }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Categories />
+    <Variables>
+      <Variable name="commandname" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="590b37d1-9606-4f4e-9163-df51900a4ca4" shortcut="map" description="Creates a mapping test" text="[Test]&#xD;&#xA;public void The_value_in_the_$propertyname$_property_should_be_equal_to_the_value_in_the_$columnname$_column()&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Categories />
+    <Variables>
+      <Variable name="propertyname" expression="" initialRange="0" />
+      <Variable name="columnname" expression="decapitalize(propertyname)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="e4e0f5ea-cddb-4173-a2ed-54169bae5887" shortcut="spec" description="" text="[Test]&#xD;&#xA;public void $name$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Categories />
+    <Variables>
+      <Variable name="name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b6c35c81-363c-4ce6-b79c-eb5be91f95e5" shortcut="tf" description="" text="[TestFixture]&#xD;&#xA;public class $TESTFIXTURENAME$ : $INHERITEDCLASS$&#xD;&#xA;{&#xD;&#xA;	[Test]&#xD;&#xA;	public void $TESTNAME$()&#xD;&#xA;    {&#xD;&#xA;		$END$&#xD;&#xA;	}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Categories />
+    <Variables>
+      <Variable name="TESTFIXTURENAME" expression="" initialRange="0" />
+      <Variable name="INHERITEDCLASS" expression="" initialRange="0" />
+      <Variable name="TESTNAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
