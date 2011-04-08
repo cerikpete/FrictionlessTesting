@@ -14,7 +14,7 @@ namespace Tests.Specs.NewStyle
     public class BaseHomeControllerNewStyleSpecs : SpecificationsFor<HomeController>
     {
         protected IEnumerable<Document> _documents;
-        private ActionResult _result;
+        protected ActionResult _result;
 
         public override void Set_up_context()
         {
@@ -40,8 +40,8 @@ namespace Tests.Specs.NewStyle
         [Test]
         public void Should_load_all_documents_to_the_view()
         {
-            var result = sut.Index() as ViewResult;
-            Assert.AreEqual(_documents, result.ViewData["Data"]);
+            var viewResult = _result as ViewResult;
+            Assert.AreEqual(_documents, viewResult.ViewData["Data"]);
         }
     }
 }
